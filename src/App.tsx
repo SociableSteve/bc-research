@@ -1,26 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { } from 'react-i18next';
+import { withTranslation, WithTranslation } from 'react-i18next';
 
-function App() {
+function App({ t, i18n }: WithTranslation) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <button onClick={() => i18n.changeLanguage('en')}>English</button>
+      <button onClick={() => i18n.changeLanguage('fr')}>French</button>
+      <button onClick={() => i18n.changeLanguage('de')}>German</button>
+
+      {t("welcome")}
     </div>
   );
 }
 
-export default App;
+export default withTranslation()(App);
