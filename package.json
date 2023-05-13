@@ -2,6 +2,7 @@
   "name": "bc-research",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sociablesteve.github.io/bc-research",
   "dependencies": {
     "@types/node": "^16.18.30",
     "@types/react": "^18.2.6",
